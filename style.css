@@ -236,7 +236,10 @@ section .title::after{
     height: 500px;
     width: 400px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 10px;
+    animation: appear linear;
+     animation-timeline:view();
+     animation-range: entry 0% cover 40%;
 }
 .about .about-content .right{
     width: 55%;
@@ -285,6 +288,9 @@ section .title::after{
     margin-top: 10px;
     margin-bottom: 10px;
     cursor: pointer;
+    animation: appear linear;
+     animation-timeline:view();
+     animation-range: entry 0% cover 40%;
   
 } 
 
@@ -335,9 +341,30 @@ section .title::after{
      transition-delay: 1s; */
      /* transition-delay: 2s; */
      transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     /*  */
+     animation: appear linear;
+     animation-timeline:view();
+     animation-range: entry 0% cover 40%;
+     /*  */
 }
 
+/*  */
+@keyframes appear{
+    from {
+        opacity: 1;
+        scale: 0.5;
+        /* transform: translate(-100px); */
+        /* clip-path: inset(100% 100% 0 0); */
+    }
+    to{
+        opacity: 1;
+        /* scale: 1; */
+        transform: translate(0px);
+        /* clip-path: inset(0 0 0 0); */
+    }
+ }
 
+/*  */
 
 .services .serv-content .card:hover{
    
@@ -357,6 +384,9 @@ section .title::after{
     margin-left: 26%;
     text-decoration: none;
 }
+
+
+
 
 
 .services .serv-content .card i{
@@ -412,6 +442,9 @@ section .title::after{
 
 .icon{
     width: 80px;
+    animation: appear linear;
+     animation-timeline:view();
+     animation-range: entry 0% cover 40%;
 }
 .icon:hover{
     transform: scale(1.1,1.1);
