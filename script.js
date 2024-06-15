@@ -71,3 +71,33 @@ $(document).ready(function(){
         }
     });
 });
+
+
+//MODE-CHANGE
+let btnDark=document.querySelector("#dark-mode");
+let btnLight=document.querySelector("#light-mode");
+
+
+btnDark.addEventListener("click",()=>{
+    document.querySelector("body").style.backgroundColor="black";
+    document.querySelector("body").style.color="white";
+    document.querySelector("#services").style.backgroundColor="black";
+    document.querySelector("#services").style.color="white";
+
+    btnLight.classList.remove("hide");
+    btnDark.classList.add("hide");
+   
+   }
+);
+
+btnLight.addEventListener("click",()=>{
+ 
+    document.querySelector("body").style.backgroundColor="white";
+    document.querySelector("body").style.color="black";
+    document.querySelector("#services").style.backgroundColor="white";
+    document.querySelector("#services").style.color="black";
+
+    btnLight.classList.add("hide");
+    btnDark.classList.remove("hide");
+}
+);
