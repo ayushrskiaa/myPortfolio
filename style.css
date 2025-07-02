@@ -327,7 +327,7 @@ section .title::after{
     background: #000000;
     color: rgb(255, 251, 251);
 }
-/* services section styling */
+ /* services section styling */
 
 
 .project-img{
@@ -543,9 +543,6 @@ section .title::after{
     background: #000000;
     color: white;
 }
-/* .teams .title::after{
-    content: "who with me";
-} */
 .teams .carousel .card{
     background: #222;
     border-radius: 6px;
@@ -739,6 +736,192 @@ footer span a:hover{
 }
 
 
+/* experience section styling */
+.experience {
+    background: #f9f9f9;
+    color: #333;
+}
+
+.experience .title::after {
+    content: "my journey";
+    background: #f9f9f9;
+}
+
+.experience .experience-content {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    padding: 40px 0 0 0;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 0 0 30px;
+    max-width: 800px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #ffd700 0%, #fff 100%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2px;
+    top: 8px;
+    width: 36px;
+    height: 36px;
+    background: #222;
+    border: 3px solid #ffd700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffd700;
+    font-size: 1.3rem;
+    z-index: 2;
+    box-shadow: 0 2px 8px #000a;
+}
+.timeline-content {
+    margin-left: 60px;
+    background: rgba(30,30,30,0.85);
+    border-radius: 18px;
+    padding: 22px 28px;
+    box-shadow: 0 4px 24px #0004;
+    border-left: 4px solid #ffd700;
+    position: relative;
+    transition: transform 0.2s;
+}
+.timeline-content:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 32px #0007;
+}
+.timeline-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+    color: #ffd700;
+    font-weight: 600;
+}
+.timeline-content .company {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.timeline-date {
+    display: block;
+    color: #bbb;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+.timeline-content ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #eee;
+    font-size: 1rem;
+}
+@media (max-width: 700px) {
+    .timeline { padding-left: 0; }
+}
+
+/* --- Improved Achievements Section --- */
+.achievements {
+    background: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+.achievements .title {
+    color: #ffd700;
+    letter-spacing: 2px;
+}
+.achievements-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 40px;
+}
+.achievement-card {
+    background: rgba(255,255,255,0.07);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #0007;
+    padding: 32px 28px 24px 28px;
+    min-width: 260px;
+    max-width: 320px;
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ffd700;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+.achievement-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px #ffd70044;
+    border-color: #fff;
+    background: rgba(236,182,31,0.12);
+}
+.achievement-icon {
+    font-size: 2.8rem;
+    color: #ffd700;
+    margin-bottom: 18px;
+    background: rgba(255,255,255,0.09);
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px #ffd70033;
+}
+.achievement-card h3 {
+    font-size: 1.25rem;
+    color: #ffd700;
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+.achievement-card p {
+    color: #fff;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.achievement-type {
+    background: #ffd700;
+    color: #181818;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 4px 16px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #ffd70033;
+}
+@media (max-width: 900px) {
+    .achievements-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .achievement-card {
+        max-width: 90vw;
+    }
+} 
+
 /* responsive media query start */
 @media (max-width: 1104px) {
     .about .about-content .left img{
@@ -815,6 +998,27 @@ footer span a:hover{
         width: 100%;
         margin-bottom: 35px;
     }
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+    
+    .timeline-item::after {
+        left: 15px;
+    }
+    
+    .timeline-item:nth-child(even)::after {
+        left: 15px;
+    }
 }
 
 @media (max-width: 690px) {
@@ -832,6 +1036,22 @@ footer span a:hover{
     }
     .services .serv-content .card{
         width: 100%;
+    }
+    .timeline-item {
+        padding-left: 50px;
+        padding-right: 15px;
+    }
+    
+    .timeline-content {
+        padding: 15px 20px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 18px;
+    }
+    
+    .timeline-content h4 {
+        font-size: 16px;
     }
 }
 
